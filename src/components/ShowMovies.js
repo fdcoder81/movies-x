@@ -3,11 +3,18 @@ import MovieItem from "./MovieItem";
 import MovieDetails from "./MovieDetails";
 
 class ShowMovies extends React.Component {
-  state = { showDetails: false };
+  state = { showDetails: false, movieSelected: [] };
 
   handleClick = movie => {
-    console.log(movie);
+    this.setState({
+      movieSelected: movie,
+      showDetails: !this.state.showDetails
+    });
   };
+
+  componentDidUpdate() {
+    console.log(this.state.movieSelected);
+  }
 
   render() {
     const movies = this.props.moviesData;
@@ -26,7 +33,7 @@ class ShowMovies extends React.Component {
           <div className="card-deck">{list}</div>
         ) : (
           <div>
-            <MovieDetails />
+            <MovieDetails movieSelected={this.state.movieSelected} />
           </div>
         )}
       </div>

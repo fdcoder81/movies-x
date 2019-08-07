@@ -11,8 +11,6 @@ class MovieItem extends React.Component {
     let image_url = "https://image.tmdb.org/t/p/w500";
     image_url += this.props.movie.poster_path;
 
-    console.log(movie);
-
     return (
       <div className="card my-4">
         <img className="card-img-top" src={image_url} alt="Card cap" />
