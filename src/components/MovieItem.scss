@@ -1,0 +1,12 @@
+.card {
+  width: 18rem;
+
+  &-img-top {
+    height: 25rem;
+    object-fit: cover;
+  }
+
+  &-title {
+    min-height: 4rem;
+  }
+}
