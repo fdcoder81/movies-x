@@ -10,3 +10,13 @@
     min-height: 4rem;
   }
 }
+
+.trailers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .card {
+    flex-basis: 49%;
+  }
+}
