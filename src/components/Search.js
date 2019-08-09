@@ -19,7 +19,7 @@ class Search extends React.Component {
     return (
       <div>
         <form className="form-inline" onSubmit={this.onFormSubmit}>
-          <div className="w-100 mx-auto">
+          <div className="w-100 d-flex justify-content-center">
             <input
               className="form-control w-50"
               type="text"

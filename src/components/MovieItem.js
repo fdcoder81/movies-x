@@ -8,7 +8,6 @@ class MovieItem extends React.Component {
 
   render() {
     const movie = this.props.movie;
-    console.log(movie);
 
     let image_url = "https://image.tmdb.org/t/p/w500";
     movie.poster_path === null
@@ -16,7 +15,7 @@ class MovieItem extends React.Component {
       : (image_url += movie.poster_path);
 
     return (
-      <div className="card my-4">
+      <div className="card my-4 movie-card">
         <img className="card-img-top" src={image_url} alt="Card cap" />
         <div className="card-body">
           <h5 className="card-title">{movie.title}</h5>

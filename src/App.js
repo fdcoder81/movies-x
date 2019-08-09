@@ -22,7 +22,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="container text-center">
-        <h1 className="display-3 mb-4">MOVIES X</h1>
+        <h1 className="display-3 mb-2">MOVIES X</h1>
+        <p>By Carlo Anselmi</p>
         <Search onFormSubmit={this.onFormSubmit} />
         <ShowMovies moviesData={this.state.moviesData} />
       </div>

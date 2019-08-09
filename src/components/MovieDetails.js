@@ -1,13 +1,14 @@
 import React from "react";
 import Trailers from "./Trailers";
+import noImage from "../no-image.jpg";
 
 const MovieDetails = props => {
   const movieSelected = props.movieSelected;
-  const videos = props.videos;
-  console.log(videos);
 
   let image_url = "https://image.tmdb.org/t/p/w500";
-  image_url += movieSelected.poster_path;
+  movieSelected.poster_path === null
+    ? (image_url = noImage)
+    : (image_url += movieSelected.poster_path);
 
   return (
     <div className="jumbotron mt-4 pt-2 bg-light">
@@ -26,8 +27,8 @@ const MovieDetails = props => {
       </div>
 
       <div className="row">
-        <div className="col-4 p-0">
-          <div className="card border-info">
+        <div className="col-lg-4 p-0">
+          <div className="card border-info mx-auto mb-2">
             <img src={image_url} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{movieSelected.title}</h5>
@@ -39,7 +40,7 @@ const MovieDetails = props => {
           </div>
         </div>
 
-        <div className="col-8 p-0">
+        <div className="col-lg-8 p-0">
           <Trailers videos={props.videos} />
         </div>
       </div>

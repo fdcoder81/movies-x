@@ -8,6 +8,10 @@ const key = "AIzaSyBIdZzcIrExUP9CMwngK-EhZiCgyA2TpAQ";
 class ShowMovies extends React.Component {
   state = { showDetails: false, movieSelected: [], videos: [] };
 
+  componentWillReceiveProps() {
+    this.setState({ showDetails: false });
+  }
+
   getVideo = async term => {
     const response = await youtube.get("/search", {
       params: {

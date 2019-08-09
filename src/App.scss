@@ -1,0 +1,36 @@
+.card {
+  width: 18rem;
+
+  &-img-top {
+    height: 25rem;
+    object-fit: cover;
+  }
+
+  &-title {
+    min-height: 4rem;
+  }
+}
+
+.trailers {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .card {
+    &-footer {
+      min-height: 80px;
+    }
+  }
+}
+
+@media (max-width: 481px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .movie-card {
+    margin: 0 auto;
+  }
+}
